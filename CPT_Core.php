@@ -348,6 +348,10 @@ if ( ! class_exists( 'CPT_Core' ) ) :
 			load_textdomain( 'cpt-core', $mofile );
 		}
 
+		/**
+		 * Method for dashboard at a glance 
+		 * @since ataglance merged
+		 */
 		public function at_a_glance( $items = array() ) {
 			$num_posts = wp_count_posts( $this->post_type() );
 			if ( ! $num_posts ) {
@@ -377,6 +381,10 @@ if ( ! class_exists( 'CPT_Core' ) ) :
 			return $items;
 		}
 	
+		/**
+		 * Method to get menu icon
+		 * @since ataglance merged
+		 */
 		public function get_menu_icon() {
 	
 			if ( is_string( $this->cpt_args->menu_icon ) ) {
